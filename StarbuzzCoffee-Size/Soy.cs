@@ -21,8 +21,17 @@ namespace Starbuzz_DecoratorPattern
         }
 
         public override double Cost
-        {
-            get { return .15 + _beverage.Cost; }
+        {            
+            get 
+            {
+                switch (_beverage.Size)
+                {
+                    case BeverageSize.TALL: return _beverage.Cost + .10;
+                    case BeverageSize.GRANDLE: return _beverage.Cost + .15;
+                    case BeverageSize.VENTI: return _beverage.Cost + .20;
+                }
+                return _beverage.Cost;
+            }
         }
     }
 }

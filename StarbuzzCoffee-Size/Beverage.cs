@@ -10,5 +10,6 @@ namespace Starbuzz_DecoratorPattern
     {
         public virtual string Description { get; protected set; }
         public virtual double Cost { get; protected set; }
+        public virtual BeverageSize Size { get; set; }
     }
 }

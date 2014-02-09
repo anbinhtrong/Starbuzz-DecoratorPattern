@@ -9,6 +9,7 @@ namespace StarbuzzCoffee_Size
 {
     class Program
     {
+        //http://blog.daum.net/chowood/8039123
         static void Main(string[] args)
         {
             Beverage beverage = new Espresso();
@@ -24,6 +25,7 @@ namespace StarbuzzCoffee_Size
                 + " $" + beverage2.Cost);
 
             Beverage beverage3 = new HouseBlend();
+            beverage3.Size = BeverageSize.TALL;
             beverage3 = new Soy(beverage3);
             beverage3 = new Mocha(beverage3);
             beverage3 = new Whip(beverage3);
